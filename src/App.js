@@ -1,13 +1,13 @@
-function App() {
+import TemporaryDrawer from "./Navbar";
+
+const App = () =>{
   return (
-    <div className="App">
-      <header className="App-header">
-            <p>
-              This is purely for testing purposes.
-            </p>
-      </header>
-    </div>
+    <>
+      <TemporaryDrawer />         
+    </>
   );
 }
 
+
 export default App;
+
