@@ -1,13 +1,13 @@
-import TemporaryDrawer from "./Navbar";
+import Navbar from "./components/Navbar";
+import Test from "./components/test";
 
-const App = () =>{
+const App = () => {
   return (
     <>
-      <TemporaryDrawer />         
+      <Navbar />
+      <Test />
     </>
   );
-}
-
+};
 
 export default App;
-
