@@ -12,15 +12,14 @@ const auto_scaling_group = "auto_scaling_group";
 const aurora = "aurora";
 const cli = "cli";
 const sdk = "sdk";
-// const cloudFormation = "cloudFormation";
+const cloudFormation = "cloudFormation";
 
 const questions = [
   // AMIs
   {
     question: "What is the purpose of an AMI?",
     flashcard: "What is the purpose of an AMI?",
-    categories: [ami],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, ami],
     answers: [
       {
         answer:
@@ -47,8 +46,7 @@ const questions = [
   {
     question: "An AMI is specific to:",
     flashcard: "An AMI is specific to:",
-    categories: [ami],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, ami],
     answers: [
       {
         answer: "a Region.",
@@ -75,8 +73,7 @@ const questions = [
       "You can create an AMI from an EC2 instance that is currently running or stopped.",
     flashcard:
       "True or False: You can create an AMI from an EC2 instance that is currently running or stopped.",
-    categories: [ami],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, ami],
     answers: [
       {
         answer: "True",
@@ -93,8 +90,7 @@ const questions = [
   {
     question: "Which of the below statements is true of AMIs?",
     flashcard: "What are communitry AMIs?",
-    categories: [ami],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, ami],
     answers: [
       {
         answer:
@@ -123,8 +119,7 @@ const questions = [
       "The AWS Martketplace hosts free and paid AMIs that are supported by venders.",
     flashcard:
       "True or False: The AWS Marketplace hosts free and paid AMIs that are supported by vendors.",
-    categories: [ami],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, ami],
     answers: [
       {
         answer: "True",
@@ -141,8 +136,7 @@ const questions = [
   {
     question: "Select all that are true from the following:",
     flashcard: null,
-    categories: [ami],
-    tags: [medium, solutions_architect_associate, multiple_selection],
+    tags: [medium, solutions_architect_associate, multiple_selection, ami],
     answers: [
       {
         answer:
@@ -175,8 +169,7 @@ const questions = [
     question: "AMIs all have access to the same hardware in each region.",
     flashcard:
       "True or False: AMIs all have access to the same hardware in each region.",
-    categories: [ami],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, ami],
     answers: [
       {
         answer: "True",
@@ -194,8 +187,7 @@ const questions = [
   {
     question: "What is the default rate limit for Amazon's API Gateway?",
     flashcard: "What is the default rate limit for Amazon's API Gateway?",
-    categories: [api_gateway],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, api_gateway],
     answers: [
       {
         answer: "100 per second.",
@@ -221,8 +213,12 @@ const questions = [
     question:
       "What is true of CORS in relation to AWS's API Gateway? (Select all that apply)",
     flashcard: null,
-    categories: [api_gateway],
-    tags: [multiple_selection, easy, solutions_architect_associate],
+    tags: [
+      multiple_selection,
+      easy,
+      solutions_architect_associate,
+      api_gateway,
+    ],
     answers: [
       {
         answer: "CORS is not supported by AWS's API Gateway.",
@@ -253,8 +249,7 @@ const questions = [
       "You can utilize AWS Cognito or create a custom Lambda function to require authentication to your API.",
     flashcard:
       "True or False: You can utilize AWS Cognito or create a custom Lambda function to require authentication to your API.",
-    categories: [api_gateway],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, api_gateway],
     answers: [
       {
         answer: "True",
@@ -272,8 +267,7 @@ const questions = [
     question: "Stages allow you to have multiple versions of your API.",
     flashcard:
       "True or False: Stages allow you to have multiple versions of your API.",
-    categories: [api_gateway],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, api_gateway],
     answers: [
       {
         answer: "True",
@@ -290,8 +284,7 @@ const questions = [
   {
     question: "What are the sub paths referred to as in an API Gateway?",
     flashcard: "What are the sub paths referred to as in an API Gateway?",
-    categories: [api_gateway],
-    tags: [multiple_choice, medium, solutions_architect_associate],
+    tags: [multiple_choice, medium, solutions_architect_associate, api_gateway],
     answers: [
       {
         answer: "Policies",
@@ -316,8 +309,7 @@ const questions = [
   {
     question: "What is an Invoke URL in relation to an API Gateway?",
     flashcard: "What is an Invoke URL in relation to an API Gateway?",
-    categories: [api_gateway],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, api_gateway],
     answers: [
       {
         answer: "A URL that can be used to invoke a Lambda function.",
@@ -343,8 +335,12 @@ const questions = [
     question:
       "Select the HTTP methods supported by API Gateway. (Select all that apply)",
     flashcard: "The four most common HTTP methods support by API Gateway.",
-    categories: [api_gateway],
-    tags: [multiple_selection, easy, solutions_architect_associate],
+    tags: [
+      multiple_selection,
+      easy,
+      solutions_architect_associate,
+      api_gateway,
+    ],
     answers: [
       {
         answer: "GET",
@@ -374,8 +370,7 @@ const questions = [
   {
     question: "An autoscaling group is a collection of:",
     flashcard: "An autoscaling group is a collection of:",
-    categories: [auto_scaling_group],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, api_gateway],
     answers: [
       {
         answer: "EC2 Instances",
@@ -400,8 +395,12 @@ const questions = [
   {
     question: "Scaling out is when:",
     flashcard: "Scaling out is when:",
-    categories: [auto_scaling_group],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      auto_scaling_group,
+    ],
     answers: [
       {
         answer: "EC2 Instances are added by the autoscaling group.",
@@ -426,8 +425,12 @@ const questions = [
   {
     question: "Scaling up is when:",
     flashcard: "Scaling up is when:",
-    categories: [auto_scaling_group],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      auto_scaling_group,
+    ],
     answers: [
       {
         answer: "EC2 Instances are added by the autoscaling group.",
@@ -452,8 +455,12 @@ const questions = [
   {
     question: "Scaling in is when:",
     flashcard: "Scaling in is when:",
-    categories: [auto_scaling_group],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      auto_scaling_group,
+    ],
     answers: [
       {
         answer: "EC2 Instances are added by the autoscaling group.",
@@ -480,8 +487,7 @@ const questions = [
       "Launch configurations cannot be manually edited and must be cloned or a new one created.",
     flashcard:
       "Launch configurations cannot be manually edited and must be cloned or a new one created.",
-    categories: [auto_scaling_group],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, auto_scaling_group],
     answers: [
       {
         answer: "True",
@@ -498,8 +504,12 @@ const questions = [
   {
     question: "What does an autoscaling group use to launch EC2 instances?",
     flashcard: "What does an autoscaling group use to launch EC2 instances?",
-    categories: [auto_scaling_group],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      auto_scaling_group,
+    ],
     answers: [
       {
         answer: "An IAM role",
@@ -526,8 +536,7 @@ const questions = [
       "A Target Scaling Policy scales based on when a target value for a given metric is reached.",
     flashcard:
       "A Target Scaling Policy scales based on when a target value for a given metric is reached.",
-    categories: [auto_scaling_group],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, auto_scaling_group],
     answers: [
       {
         answer: "True",
@@ -546,8 +555,7 @@ const questions = [
       "A Launch Configuration is a collection of settings that are used to launch EC2 instances.",
     flashcard:
       "A Launch Configuration is a collection of settings that are used to launch EC2 instances.",
-    categories: [auto_scaling_group],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, auto_scaling_group],
     answers: [
       {
         answer: "True",
@@ -566,8 +574,12 @@ const questions = [
       "In relation to Auto Scaling Groups, Health Checks determine the current state of:",
     flashcard:
       "In relation to Auto Scaling Groups, Health Checks determine the current state of:",
-    categories: [auto_scaling_group],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      auto_scaling_group,
+    ],
     answers: [
       {
         answer: "An Autoscaling Group",
@@ -594,8 +606,12 @@ const questions = [
       "What is the main difference between Simple Scaling Policy and Scaling Policy with Steps?",
     flashcard:
       "What is the main difference between Simple Scaling Policy and Scaling Policy with Steps?",
-    categories: [auto_scaling_group],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      auto_scaling_group,
+    ],
     answers: [
       {
         answer:
@@ -625,8 +641,7 @@ const questions = [
     question:
       "Which of the following are true of Amazon Aurora? (Select all that apply)",
     flashcard: null,
-    categories: [aurora],
-    tags: [multiple_selection, easy, solutions_architect_associate],
+    tags: [multiple_selection, easy, solutions_architect_associate, aurora],
     answers: [
       {
         answer: "Fully Managed",
@@ -657,8 +672,7 @@ const questions = [
       "What two database engines are available to run in Amazon Aurora?",
     flashcard:
       "What two database engines are available to run in Amazon Aurora?",
-    categories: [aurora],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, aurora],
     answers: [
       {
         answer: "MariaDB and PostgreSQL",
@@ -685,8 +699,7 @@ const questions = [
       "What is the maximum number of Read Replicas that can be created for an Amazon Aurora DB cluster?",
     flashcard:
       "What is the maximum number of Read Replicas that can be created for an Amazon Aurora DB cluster?",
-    categories: [aurora],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, aurora],
     answers: [
       {
         answer: "15",
@@ -711,8 +724,7 @@ const questions = [
   {
     question: "What is the benefit to Aurora Serverless?",
     flashcard: "What is the benefit to Aurora Serverless?",
-    categories: [aurora],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, aurora],
     answers: [
       {
         answer: "There is no such thing as Aurora Serverless.",
@@ -741,8 +753,7 @@ const questions = [
     question:
       "Which of the following are true of Amazon Aurora? (Select all that apply)",
     flashcard: null,
-    categories: [aurora],
-    tags: [multiple_selection, easy, solutions_architect_associate],
+    tags: [multiple_selection, easy, solutions_architect_associate, aurora],
     answers: [
       {
         answer: "3x faster than PostgreSQL",
@@ -775,8 +786,7 @@ const questions = [
   {
     question: "What does CLI stand for?",
     flashcard: "What does CLI stand for?",
-    categories: [cli],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, cli],
     answers: [
       {
         answer: "Common Library Implementation",
@@ -803,8 +813,7 @@ const questions = [
       "What command would you run to set up AWS credentials for the CLI?",
     flashcard:
       "What command would you run to set up AWS credentials for the CLI?",
-    categories: [cli],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, cli],
     answers: [
       {
         answer: "aws configure",
@@ -831,8 +840,7 @@ const questions = [
       "What must be enabled for a user's account in order for them to use the CLI or SDK?",
     flashcard:
       "What must be enabled for a user's account in order for them to use the CLI or SDK?",
-    categories: [cli],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, cli],
     answers: [
       {
         answer: "Allow SDK/CLI = true",
@@ -858,8 +866,7 @@ const questions = [
   {
     question: "What language is used to install the CLI?",
     flashcard: "What language is used to install the CLI?",
-    categories: [cli],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, cli],
     answers: [
       {
         answer: "Python",
@@ -884,8 +891,7 @@ const questions = [
   {
     question: "What does SDK stand for?",
     flashcard: "What does SDK stand for?",
-    categories: [sdk],
-    tags: [multiple_choice, easy, solutions_architect_associate],
+    tags: [multiple_choice, easy, solutions_architect_associate, sdk],
     answers: [
       {
         answer: "Shared Development Kit",
@@ -912,8 +918,7 @@ const questions = [
       "The AWS SDK is a set of API Libraries that allow you to interact with AWS services from your application code.",
     flashcard:
       "The AWS SDK is a set of API Libraries that allow you to interact with AWS services from your application code.",
-    categories: [cli],
-    tags: [true_false, easy, solutions_architect_associate],
+    tags: [true_false, easy, solutions_architect_associate, cli],
     answers: [
       {
         answer: "True",
@@ -931,8 +936,7 @@ const questions = [
     question:
       "Which of the following programming languages have access to the AWS SDK?",
     flashcard: null,
-    categories: [sdk],
-    tags: [multiple_selection, medium, solutions_architect_associate],
+    tags: [multiple_selection, medium, solutions_architect_associate, sdk],
     answers: [
       {
         answer: "SQL",
@@ -957,6 +961,168 @@ const questions = [
     ],
     selection: {},
   },
+
+  // CLOUDFORMATION
+  {
+    question: "What are the two primary concerns of CloudFormation?",
+    flashcard: "What are the two primary concerns of CloudFormation?",
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      cloudFormation,
+    ],
+    answers: [
+      {
+        answer: "Automation and Infratstructure as Code (IAC)",
+        correct: true,
+      },
+      {
+        answer: "Infratstructure as Code (IAC) and Serverless Architectures",
+        correct: false,
+      },
+      {
+        answer: "Automation and Cloud Deployments",
+        correct: false,
+      },
+      {
+        answer: "None of the above",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "What are the two formats that CloudFormation supports?",
+    flashcard: "What are the two formats that CloudFormation supports?",
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      cloudFormation,
+    ],
+    answers: [
+      {
+        answer: "Python and Libraries",
+        correct: false,
+      },
+      {
+        answer: "Java and JavaScript",
+        correct: false,
+      },
+      {
+        answer: "Protobuff and OpenData Format",
+        correct: false,
+      },
+      {
+        answer: "JSON and YAML",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question:
+      "What is the message displayed when CloudFormation encounters an error while deploying a script?",
+    flashcard:
+      "What is the message displayed when CloudFormation encounters an error while deploying a script?",
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      cloudFormation,
+    ],
+    answers: [
+      {
+        answer: "ROLLBACK_IN_PROGRESS",
+        correct: true,
+      },
+      {
+        answer: "ERROR_IN_NESTED_STACK",
+        correct: false,
+      },
+      {
+        answer: "FAILURE_TO_DEPLOY",
+        correct: false,
+      },
+      {
+        answer: "None of the above",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "What is the maximum size of a CloudFormation Template?",
+    flashcard: "What is the maximum size of a CloudFormation Template?",
+    tags: [
+      multiple_choice,
+      easy,
+      solutions_architect_associate,
+      cloudFormation,
+    ],
+    answers: [
+      {
+        answer: "1 GB",
+        correct: true,
+      },
+      {
+        answer: "5 MB",
+        correct: false,
+      },
+      {
+        answer: "51,200 bytes",
+        correct: false,
+      },
+      {
+        answer: "There is no maximum size",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "Which of the following are true of CloudFormation templates?",
+    flashcard: null,
+    tags: [
+      multiple_selection,
+      medium,
+      solutions_architect_associate,
+      cloudFormation,
+    ],
+    answers: [
+      {
+        answer:
+          "At least one resource must be defined in 'Resources' in order for the template to be valid.",
+        correct: true,
+      },
+      {
+        answer: "Outputs are values you can import to other stacks.",
+        correct: true,
+      },
+      {
+        answer: "Parameters handle user input into a template.",
+        correct: true,
+      },
+      {
+        answer:
+          "The description field allows you to describe what the template is intended for.",
+        correct: true,
+      },
+      {
+        answer:
+          "Nesting templates is not supported and will likely cause errors.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  // KEEN QUESTIONS HERE
 ];
 
 export default questions;

@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar";
-import Question from "./components/Question";
+import Flashcard from "./components/Flashcard";
+// import Question from "./components/Question";
 
 const App = () => {
   return (
     <>
       <Navbar />
-      <Question />
+      {/* <Question /> */}
+      <Flashcard />
     </>
   );
 };

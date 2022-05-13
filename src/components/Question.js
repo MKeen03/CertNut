@@ -1,6 +1,5 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import "../styles/Question.css";
 import vars from "../utility/vars";
 import questions from "../utility/questions";
 import {
