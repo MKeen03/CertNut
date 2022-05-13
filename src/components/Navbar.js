@@ -17,6 +17,7 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import vars from "../utility/vars";
 
 const Navbar = () => {
   const providers = [
@@ -53,7 +54,7 @@ const Navbar = () => {
       ],
     },
   ];
-  const drawerWidth = 350;
+  const drawerWidth = vars.drawerWidth;
 
   return (
     <Box sx={{ display: "flex" }}>

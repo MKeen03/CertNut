@@ -3,16 +3,16 @@ const true_false = "true_false";
 const multiple_choice = "multiple_choice";
 const easy = "easy";
 const medium = "medium";
-const hard = "hard";
+// const hard = "hard";
 const solutions_architect_associate = "solutions_architect_associate";
-const certified_cloud_practicioner = "certified_cloud_practicioner";
+// const certified_cloud_practicioner = "certified_cloud_practicioner";
 const multiple_selection = "multiple_selection";
 const api_gateway = "api_gateway";
 const auto_scaling_group = "auto_scaling_group";
 const aurora = "aurora";
 const cli = "cli";
 const sdk = "sdk";
-const cloudFormation = "cloudFormation";
+// const cloudFormation = "cloudFormation";
 
 const questions = [
   // AMIs
