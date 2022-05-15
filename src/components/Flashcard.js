@@ -2,6 +2,7 @@ import * as React from "react";
 import vars from "../utility/vars";
 import questions from "../utility/questions";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
+import { createTheme, ThemeProvider, } from '@mui/material/styles';
 
 let question = questions[Math.floor(Math.random() * questions.length)];
 
@@ -21,7 +22,7 @@ const Flashcard = () => {
     >
       <FrontSide
         style={{
-          backgroundColor: "#41669d",
+          backgroundColor: "#eec8af",
           display: "flex",
           alignItems: "center",
           flexDirection: "row",
@@ -30,7 +31,7 @@ const Flashcard = () => {
       >
         {question.question}
       </FrontSide>
-      <BackSide style={{ backgroundColor: "#175852" }}>
+      <BackSide style={{ backgroundColor: "#ffcf8b" }}>
         {question.answers[0].answer}
       </BackSide>
     </Flippy>

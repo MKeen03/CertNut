@@ -20,6 +20,7 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import vars from "../utility/vars";
 
 
+
 const Navbar = () => {
   const providers = [
     {
@@ -56,6 +57,7 @@ const Navbar = () => {
     },
   ];
   const drawerWidth = vars.drawerWidth;
+
 
   return (
     <Box sx={{ display: "flex" }}>
