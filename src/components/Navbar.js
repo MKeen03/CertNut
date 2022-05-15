@@ -18,46 +18,75 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import vars from "../utility/vars";
+import questions from "../utility/questions";
 
+const Navbar = (props) => {
+  const filterQuestions = props.filterQuestions;
+  const Model = {
+    providers: [
+      {
+        provider: "Amazon Web Services",
+        exams: [
+          {
+            name: "Certified Cloud Practicioner",
+            badge: "Coming Soon",
+            tag: "certified_cloud_practicioner",
+          },
+          {
+            name: "Solutions Architect Associate",
+            badge: "Coming Soon",
+            tag: "solutions_architect_associate",
+          },
+          { name: "Developer Associate", badge: "Coming Soon", tag: "da" },
+          {
+            name: "SysOps Administrator Associate",
+            badge: "Coming Soon",
+            tag: "soaa",
+          },
+          {
+            name: "Solutions Architect Professional",
+            badge: "Coming Soon",
+            tag: "sap",
+          },
+          { name: "Developer Professional", badge: "Coming Soon", tag: "dp" },
+          { name: "Specialty: Security", badge: "Coming Soon", tag: "ss" },
+          {
+            name: "Specialty: Advanced Networking",
+            badge: "Coming Soon",
+            tag: "san",
+          },
+          { name: "Specialty: Database", badge: "Coming Soon", tag: "sd" },
+          {
+            name: "Specialty: Data Analytics",
+            badge: "Coming Soon",
+            tag: "sda",
+          },
+          {
+            name: "Specialty: Machine Learning",
+            badge: "Coming Soon",
+            tag: "sml",
+          },
+        ],
+      },
+      {
+        provider: "Google Cloud",
+        exams: [
+          { name: "Cloud Digital Leader", badge: "Coming Soon!" },
+          { name: "Cloud Engineer", badge: "Coming Soon!" },
+          { name: "Cloud DevOps Engineer", badge: "Coming Soon!" },
+          { name: "Cloud Security Engineer", badge: "Coming Soon!" },
+          { name: "Cloud Architect", badge: "Coming Soon!" },
+          { name: "Cloud Developer", badge: "Coming Soon!" },
+          { name: "Cloud Network Engineer", badge: "Coming Soon!" },
+          { name: "Collaboration Engineer", badge: "Coming Soon!" },
+          { name: "Data Engineer", badge: "Coming Soon!" },
+          { name: "Machine Learning Professional", badge: "Coming Soon!" },
+        ],
+      },
+    ],
+  };
 
-
-const Navbar = () => {
-  const providers = [
-    {
-      provider: "Amazon Web Services",
-      exams: [
-        { name: "Certified Cloud Practicioner", badge: "Coming Soon!" },
-        { name: "Solutions Architect Associate", badge: "Coming Soon!" },
-        { name: "Developer Associate", badge: "Coming Soon!" },
-        { name: "SysOps Administrator Associate", badge: "Coming Soon!" },
-        { name: "Developer Associate", badge: "Coming Soon!" },
-        { name: "Solutions Architect Professional", badge: "Coming Soon!" },
-        { name: "Developer Professional", badge: "Coming Soon!" },
-        { name: "Specialty: Security", badge: "Coming Soon!" },
-        { name: "Specialty: Advanced Networking", badge: "Coming Soon!" },
-        { name: "Specialty: Database", badge: "Coming Soon!" },
-        { name: "Specialty: Data Analytics", badge: "Coming Soon!" },
-        { name: "Specialty: Machine Learning", badge: "Coming Soon!" },
-      ],
-    },
-    {
-      provider: "Google Cloud",
-      exams: [
-        { name: "Cloud Digital Leader", badge: "Coming Soon!" },
-        { name: "Cloud Engineer", badge: "Coming Soon!" },
-        { name: "Cloud DevOps Engineer", badge: "Coming Soon!" },
-        { name: "Cloud Security Engineer", badge: "Coming Soon!" },
-        { name: "Cloud Architect", badge: "Coming Soon!" },
-        { name: "Cloud Developer", badge: "Coming Soon!" },
-        { name: "Cloud Network Engineer", badge: "Coming Soon!" },
-        { name: "Collaboration Engineer", badge: "Coming Soon!" },
-        { name: "Data Engineer", badge: "Coming Soon!" },
-        { name: "Machine Learning Professional", badge: "Coming Soon!" },
-      ],
-    },
-  ];
   const drawerWidth = vars.drawerWidth;
-
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -85,7 +114,7 @@ const Navbar = () => {
       >
         <Toolbar />
         <Divider />
-        {providers.map((item, index) => {
+        {Model.providers.map((item, index) => {
           return (
             <Accordion key={index}>
               <AccordionSummary
@@ -101,7 +130,11 @@ const Navbar = () => {
                   <List>
                     {item.exams.map((item, index) => (
                       <ListItem key={index} disablePadding>
-                        <ListItemButton>
+                        <ListItemButton
+                          onClick={() => {
+                            filterQuestions(item.tag, questions);
+                          }}
+                        >
                           <ListItemText primary={item.name} />
                         </ListItemButton>
                       </ListItem>
