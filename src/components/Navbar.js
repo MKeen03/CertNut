@@ -19,6 +19,7 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import vars from "../utility/vars";
 
+
 const Navbar = () => {
   const providers = [
     {
