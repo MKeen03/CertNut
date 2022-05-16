@@ -22,6 +22,7 @@ import questions from "../utility/questions";
 
 const Navbar = (props) => {
   const filterQuestions = props.filterQuestions;
+  const setPageToDisplay = props.setPageToDisplay;
   const Model = {
     providers: [
       {
@@ -129,15 +130,48 @@ const Navbar = (props) => {
                   <Divider />
                   <List>
                     {item.exams.map((item, index) => (
-                      <ListItem key={index} disablePadding>
-                        <ListItemButton
-                          onClick={() => {
-                            filterQuestions(item.tag, questions);
-                          }}
+                      <Accordion key={index}>
+                        <AccordionSummary
+                          expandIcon={<ExpandMoreIcon />}
+                          aria-controls="panel1a-content"
+                          id="panel1a-header"
                         >
-                          <ListItemText primary={item.name} />
-                        </ListItemButton>
-                      </ListItem>
+                          <Typography>{item.name}</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                          <Typography>
+                            <Divider />
+                            <List>
+                              <ListItem key={index} disablePadding>
+                                <ListItemButton
+                                  onClick={() => {
+                                    filterQuestions(item.tag, questions);
+                                    setPageToDisplay("quiz");
+                                  }}
+                                >
+                                  <ListItemText
+                                    primary="Quiz"
+                                    sx={{ textAlign: "center" }}
+                                  />
+                                </ListItemButton>
+                              </ListItem>
+                              <ListItem key={index} disablePadding>
+                                <ListItemButton
+                                  onClick={() => {
+                                    filterQuestions(item.tag, questions);
+                                    setPageToDisplay("flashcards");
+                                  }}
+                                >
+                                  <ListItemText
+                                    primary="Flashcards"
+                                    sx={{ textAlign: "center" }}
+                                  />
+                                </ListItemButton>
+                              </ListItem>
+                            </List>
+                          </Typography>
+                        </AccordionDetails>
+                      </Accordion>
                     ))}
                   </List>
                 </Typography>
@@ -151,5 +185,18 @@ const Navbar = (props) => {
     </Box>
   );
 };
+
+{
+  /* <ListItem key={index} disablePadding>
+                        <ListItemButton
+                          onClick={() => {
+                            filterQuestions(item.tag, questions);
+                            setPageToDisplay("quiz");
+                          }}
+                        >
+                          <ListItemText primary={item.name} />
+                        </ListItemButton>
+                      </ListItem> */
+}
 
 export default Navbar;

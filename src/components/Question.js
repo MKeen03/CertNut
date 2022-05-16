@@ -1,7 +1,6 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import vars from "../utility/vars";
-import questions from "../utility/questions";
 import {
   Checkbox,
   FormControlLabel,
@@ -12,11 +11,8 @@ import {
   Divider,
 } from "@mui/material";
 
-let question = questions[Math.floor(Math.random() * questions.length)];
-
-console.log(question);
-
-const Question = () => {
+const Question = (props) => {
+  const question = props.question;
   return (
     <Box
       sx={{
