@@ -13,6 +13,7 @@ const aurora = "aurora";
 const cli = "cli";
 const sdk = "sdk";
 const cloudFormation = "cloudFormation";
+const cloudfront = "cloudfront";
 
 const questions = [
   // AMIs
@@ -334,7 +335,7 @@ const questions = [
   {
     question:
       "Select the HTTP methods supported by API Gateway. (Select all that apply)",
-    flashcard: "The four most common HTTP methods support by API Gateway.",
+    flashcard: null,
     tags: [
       multiple_selection,
       easy,
@@ -386,7 +387,7 @@ const questions = [
       },
       {
         answer: "Caching layers",
-        correct: true,
+        correct: false,
       },
     ],
     selection: {},
@@ -416,7 +417,7 @@ const questions = [
       },
       {
         answer: "EC2 instances are decreased in size by the autoscaling group.",
-        correct: true,
+        correct: false,
       },
     ],
     selection: {},
@@ -1017,7 +1018,7 @@ const questions = [
       },
       {
         answer: "JSON and YAML",
-        correct: false,
+        correct: true,
       },
     ],
     selection: {},
@@ -1122,6 +1123,218 @@ const questions = [
     selection: {},
   },
 
+  // CLOUDFRONT
+  {
+    question:
+      "Cloudfront is a CDN (content distribution network) that is able to deliver speed increases for applications by caching content that is frequently accessed at edge locations.",
+    flashcard:
+      "Cloudfront is a CDN (content distribution network) that is able to deliver speed increases for applications by caching content that is frequently accessed at edge locations.",
+    tags: [true_false, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer: "True",
+        correct: true,
+      },
+      {
+        answer: "False",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question:
+      "What does TTL stand for in relation to Cloudfront, and what purpose does it serve?",
+    flashcard:
+      "What does TTL stand for in relation to Cloudfront, and what purpose does it serve?",
+    tags: [multiple_choice, medium, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer:
+          "TTL stands for Total Timing Locating and this is how long is takes to get cached content to a user near an edge location.",
+        correct: false,
+      },
+      {
+        answer:
+          "TTL stands for Total Time Live and refers to EC2 instances, not Cloudfront.",
+        correct: false,
+      },
+      {
+        answer:
+          "TTL stands for Time to Live and this determines how long content lives at an edge location before it is refreshed.",
+        correct: true,
+      },
+      {
+        answer: "TTL does not stand for anything in relation to AWS.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question:
+      "Origin is that address where the original copies of your files reside.",
+    flashcard:
+      "Origin is that address where the original copies of your files reside.",
+    tags: [true_false, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer: "True",
+        correct: true,
+      },
+      {
+        answer: "False",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question:
+      "What must you do in order for your cache to refresh immediately?",
+    flashcard:
+      "What must you do in order for your cache to refresh immediately?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer:
+          "The cache can only be updated by Cloudfront automatically and happens every 30 seconds.",
+        correct: false,
+      },
+      {
+        answer: "Update the origin",
+        correct: false,
+      },
+      {
+        answer: "Update the specific edge location's cache",
+        correct: false,
+      },
+      {
+        answer: "Invalidate it",
+        correct: true,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "Refreshing the cache has an associated transfer cost.",
+    flashcard: "Refreshing the cache has an associated transfer cost.",
+    tags: [true_false, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer: "True",
+        correct: true,
+      },
+      {
+        answer: "False",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "Access to cached content can by proctected by what?",
+    flashcard: null,
+    tags: [multiple_selection, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer: "Signed URLs",
+        correct: true,
+      },
+      {
+        answer: "KMS",
+        correct: false,
+      },
+      {
+        answer: "Signed Cookies",
+        correct: true,
+      },
+      {
+        answer: "Origin Identity Access (OAI)",
+        correct: false,
+      },
+      {
+        answer: "Using Lambda Functions",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question:
+      "A Distribution defines a collection of Edge Locations and determines cache handling behavior at edge locations.",
+    flashcard:
+      "A Distribution defines a collection of Edge Locations and determines cache handling behavior at edge locations.",
+    tags: [true_false, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer: "True",
+        correct: true,
+      },
+      {
+        answer: "False",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "What are the two types of Distributions?",
+    flashcard: "What are the two types of Distributions?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer: "Web Distribution and RTMP",
+        correct: false,
+      },
+      {
+        answer: "Lambda Distributions and OAI",
+        correct: false,
+      },
+      {
+        answer: "EC2 Instances and Edge Locations",
+        correct: false,
+      },
+      {
+        answer: "Web Distribution and RTMP",
+        correct: true,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "What does Lambda@Edge allow you to do?",
+    flashcard: "What does Lambda@Edge allow you to do?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudfront],
+    answers: [
+      {
+        answer: "Allows you to invalidate your cache so it can be updated.",
+        correct: false,
+      },
+      {
+        answer: "Enables the use of RTMP for streaming media.",
+        correct: false,
+      },
+      {
+        answer:
+          "Change the behaviour of each request or response that pass through the Lambda.",
+        correct: true,
+      },
+      {
+        answer: "Allows you to host a serverless Web Page.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
   // KEEN QUESTIONS HERE
 ];
 

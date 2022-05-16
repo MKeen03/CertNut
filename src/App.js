@@ -1,33 +1,44 @@
 import Navbar from "./components/Navbar";
-import Flashcard from "./components/Flashcard";
 import Quiz from "./pages/Quiz";
 import Welcome from "./pages/Welcome";
 import { useState } from "react";
-// import Question from "./components/Question";
+import Flashsheet from "./pages/Flashsheet";
 
 const App = () => {
   const [pageToDisplay, setPageToDisplay] = useState("welcome");
-  const [filteredQuestions, setFilteredQuestions] = useState([]);
+  const [filteredQuizQuestions, setFilteredQuizQuestions] = useState([]);
+  const [filteredFlashcardQuestions, setFilteredFlashcardQuestions] = useState(
+    []
+  );
 
-  const filterQuestions = (tag, questions) => {
+  // Filter for Quiz questions
+  const filterQuizQuestions = (tag, questions) => {
     let questionFilter = questions.filter((question) => {
       return question.tags.includes(tag);
     });
-    console.log(questionFilter);
-    setFilteredQuestions(questionFilter);
+    setFilteredQuizQuestions(questionFilter);
+  };
+
+  // Filter for Flashcard questions
+  const filterFlashcardQuestions = (tag, questions) => {
+    let questionFilter = questions.filter((question) => {
+      return question.tags.includes(tag) && question.flashcard !== null;
+    });
+    setFilteredFlashcardQuestions(questionFilter);
   };
   return (
     <>
       <Navbar
         setPageToDisplay={setPageToDisplay}
-        filterQuestions={filterQuestions}
+        filterQuizQuestions={filterQuizQuestions}
+        filterFlashcardQuestions={filterFlashcardQuestions}
       />
       {pageToDisplay === "welcome" ? (
         <Welcome />
       ) : pageToDisplay === "quiz" ? (
-        <Quiz filteredQuestions={filteredQuestions} />
+        <Quiz filteredQuizQuestions={filteredQuizQuestions} />
       ) : (
-        <Flashcard />
+        <Flashsheet filteredFlashcardQuestions={filteredFlashcardQuestions} />
       )}
     </>
   );

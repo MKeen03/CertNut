@@ -2,11 +2,11 @@ import React from "react";
 import Question from "../components/Question";
 
 const Quiz = (props) => {
-  const questions = props.filteredQuestions;
+  const questions = props.filteredQuizQuestions;
   return (
     <>
       {questions.map((question, index) => {
-        return <Question question={question} />;
+        return <Question key={index} question={question} />;
       })}
     </>
   );

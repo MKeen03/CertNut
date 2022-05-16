@@ -21,7 +21,8 @@ import vars from "../utility/vars";
 import questions from "../utility/questions";
 
 const Navbar = (props) => {
-  const filterQuestions = props.filterQuestions;
+  const filterQuizQuestions = props.filterQuizQuestions;
+  const filterFlashcardQuestions = props.filterFlashcardQuestions;
   const setPageToDisplay = props.setPageToDisplay;
   const Model = {
     providers: [
@@ -117,7 +118,7 @@ const Navbar = (props) => {
         <Divider />
         {Model.providers.map((item, index) => {
           return (
-            <Accordion key={index}>
+            <Accordion key={Math.random()}>
               <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
@@ -130,7 +131,7 @@ const Navbar = (props) => {
                   <Divider />
                   <List>
                     {item.exams.map((item, index) => (
-                      <Accordion key={index}>
+                      <Accordion key={Math.random()}>
                         <AccordionSummary
                           expandIcon={<ExpandMoreIcon />}
                           aria-controls="panel1a-content"
@@ -142,10 +143,10 @@ const Navbar = (props) => {
                           <Typography>
                             <Divider />
                             <List>
-                              <ListItem key={index} disablePadding>
+                              <ListItem key={Math.random()} disablePadding>
                                 <ListItemButton
                                   onClick={() => {
-                                    filterQuestions(item.tag, questions);
+                                    filterQuizQuestions(item.tag, questions);
                                     setPageToDisplay("quiz");
                                   }}
                                 >
@@ -155,10 +156,13 @@ const Navbar = (props) => {
                                   />
                                 </ListItemButton>
                               </ListItem>
-                              <ListItem key={index} disablePadding>
+                              <ListItem key={Math.random()} disablePadding>
                                 <ListItemButton
                                   onClick={() => {
-                                    filterQuestions(item.tag, questions);
+                                    filterFlashcardQuestions(
+                                      item.tag,
+                                      questions
+                                    );
                                     setPageToDisplay("flashcards");
                                   }}
                                 >
@@ -185,18 +189,5 @@ const Navbar = (props) => {
     </Box>
   );
 };
-
-{
-  /* <ListItem key={index} disablePadding>
-                        <ListItemButton
-                          onClick={() => {
-                            filterQuestions(item.tag, questions);
-                            setPageToDisplay("quiz");
-                          }}
-                        >
-                          <ListItemText primary={item.name} />
-                        </ListItemButton>
-                      </ListItem> */
-}
 
 export default Navbar;
