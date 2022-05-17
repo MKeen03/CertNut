@@ -3,6 +3,7 @@ import Quiz from "./pages/Quiz";
 import Welcome from "./pages/Welcome";
 import { useState } from "react";
 import Flashsheet from "./pages/Flashsheet";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   const [pageToDisplay, setPageToDisplay] = useState("welcome");
@@ -33,13 +34,9 @@ const App = () => {
         filterQuizQuestions={filterQuizQuestions}
         filterFlashcardQuestions={filterFlashcardQuestions}
       />
-      {pageToDisplay === "welcome" ? (
-        <Welcome />
-      ) : pageToDisplay === "quiz" ? (
-        <Quiz filteredQuizQuestions={filteredQuizQuestions} />
-      ) : (
-        <Flashsheet filteredFlashcardQuestions={filteredFlashcardQuestions} />
-      )}
+      <div className="content">
+        <Outlet />
+      </div>
     </>
   );
 };

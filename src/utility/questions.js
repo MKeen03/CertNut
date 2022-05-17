@@ -5,7 +5,6 @@ const easy = "easy";
 const medium = "medium";
 // const hard = "hard";
 const solutions_architect_associate = "solutions_architect_associate";
-// const certified_cloud_practicioner = "certified_cloud_practicioner";
 const multiple_selection = "multiple_selection";
 const api_gateway = "api_gateway";
 const auto_scaling_group = "auto_scaling_group";
@@ -14,6 +13,7 @@ const cli = "cli";
 const sdk = "sdk";
 const cloudFormation = "cloudFormation";
 const cloudfront = "cloudfront";
+const cloudtrail = "cloudtrail";
 
 const questions = [
   // AMIs
@@ -1326,6 +1326,32 @@ const questions = [
       {
         answer:
           "Change the behaviour of each request or response that pass through the Lambda.",
+        correct: true,
+      },
+      {
+        answer: "Allows you to host a serverless Web Page.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  // CLOUDTRAIL
+  {
+    question: "What is the primary purpose of AWS Cloudtrail?",
+    flashcard: "What is the primary purpose of AWS Cloudtrail?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "To to ensure that user's have a place to view their own data.",
+        correct: false,
+      },
+      {
+        answer: "Enables the use of RTMP for streaming media.",
+        correct: false,
+      },
+      {
+        answer: "To log calls between AWS services.",
         correct: true,
       },
       {
