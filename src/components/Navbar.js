@@ -92,7 +92,7 @@ const Navbar = (props) => {
       >
         <Toolbar>
           <Typography variant="h6" noWrap component="div">
-            Welcome To Cert-Nut
+          Cert-Nut
           </Typography>
         </Toolbar>
       </AppBar>
