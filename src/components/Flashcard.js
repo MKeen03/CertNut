@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import vars from "../utility/vars";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
+import flipfront from "../assets/flipfront.PNG";
+import flipback from "../assets/flipback.png";
 
 const Flashcard = (props) => {
   const [correctAnswer, setCorrectAnswer] = useState("");
@@ -27,26 +29,38 @@ const Flashcard = (props) => {
         width: "600px",
         height: "350px",
         alignItems: "center",
+        borderRadius: "30px",
+        boxShadow: 12,
       }}
     >
       <FrontSide
         style={{
-          backgroundColor: "#eec8af",
+          backgroundImage: `url(${flipfront})`,
+          backgroundColor: "#15013f",
+          borderRadius: "30px",
+          color: "white",
           display: "flex",
           alignItems: "center",
           flexDirection: "row",
           justifyContent: "center",
+          fontSize: "large",
+          textAlign: "center",
         }}
       >
         {question.question}
       </FrontSide>
       <BackSide
         style={{
-          backgroundColor: "#ffcf8b",
+          backgroundImage: `url(${flipback})`,
+          backgroundColor: "#31055a",
+          borderRadius: "30px",
+          color: "#31055a",
           display: "flex",
           alignItems: "center",
+          textAlign: "center",
           flexDirection: "row",
           justifyContent: "center",
+          fontSize: "large",
         }}
       >
         {correctAnswer}

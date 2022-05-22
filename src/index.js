@@ -10,10 +10,12 @@ import Welcome from "./pages/Welcome";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#554033",
+      main: "#577ef6",
+    
+    
     },
     secondary: {
-      main: "#ffcf8b",
+      main: "#becaa4",
     },
   },
 });

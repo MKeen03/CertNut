@@ -1,51 +1,101 @@
-import * as React from 'react';
-import { Box } from '@mui/system';
- 
- 
-    export default function Welcome() {
-      return (
-      
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignSelf: 'center',
-              bgcolor: 'background.paper',
-              boxShadow: 1,
+import * as React from "react";
+import { borderLeft, Box } from "@mui/system";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Typography } from "@mui/material";
+import vars from "../utility/vars";
+import DoNotDisturb from "@mui/icons-material/DoNotDisturb";
+import techthree from "../assets/tech3.png";
+import techtwo from "../assets/tech2.png";
+
+export default function Welcome() {
+  return (
+    <>
+      <div
+        style={{
+          marginLeft: `${vars.drawerWidth + 70}px`,
+          marginTop: "70px",
+        }}
+      >
+        <Box
+          sx={
+            {
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+              height: 500,
+              width: 1400,
+              border: 2,
               borderRadius: 2,
-              minWidth: 300,
-              marginLeft: '400px',
-              marginRight:'300px',
-              marginTop: '100px',
-              height: '700px',
+              borderColor: "#6c8ff9",
+
+              backgroundImage: `url(${techtwo})`,
+            }
+            // backgroundColor: '#335c67',
+          }
+        >
+          <h1
+            style={{
+              color: "white",
+              fontSize: "6rem",
             }}
           >
-            <Box sx={{ width: 1,
-            padding: '10px',
-              alignContent: 'center',
-             color: 'text.secondary', fontSize: 34}}>Welcome to </Box>
-            <Box sx={{ color: 'text.primary', fontSize: 34, fontWeight: 'bold', }}>
-              Cert Nut
-            </Box>
-            <Box
-              sx={{
-                color: 'success.dark',
-                display: 'inline',
-                fontWeight: 'bold',
-                mx: 0.5,
-                fontSize: 14,
-              }}
-            >
-              CertNut is here to help you study! We are in the process of adding multiple options to help prepare you for specific Certifications!
-             
-              CertNut is  AD driven website. We'd greatly appreciate you turning off ad-blocker.
-            </Box>
-            <Box sx={{ color: 'text.secondary', display: 'inline', fontSize: 14 }}>
-              Click on the Certifications on the left side of the page to get started!
-            </Box>
-          </Box>
-       
-      );
-    }
+            Welcome to CertNut
+          </h1>
+          <br />
+          <h4
+            style={{
+              color: "white",
+            }}
+          >
+            CertNut is here to help you study! We are in the process of adding
+            multiple options to help prepare you for specific Certifications!
+          </h4>
+        </Box>
 
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 200,
+            width: 1400,
+            backgroundColor: "white",
+          }}
+        >
+          <DoNotDisturb sx={{ color: "#c08096", fontSize: 40 }} />
+          <h3
+            style={{
+              color: "#15013f",
+            }}
+          >
+            CertNut is AD driven website. We'd greatly appreciate you turning
+            off ad-blocker.
+          </h3>
+          <DoNotDisturb sx={{ color: "#c08096", fontSize: 40 }} />
+        </Box>
 
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height: 300,
+            width: 1400,
+            backgroundImage: `url(${techthree})`,
+            border: 2,
+            borderRadius: 2,
+            borderColor: "#6c8ff9",
+          }}
+        >
+          <ArrowBackIcon sx={{ fontSize: 200, color: "#ffffff" }} />{" "}
+          <h2 style={{ color: "#ffffff" }}>
+            {" "}
+            Click on the Certifications on the left side of the page to get
+            started!
+          </h2>
+        </Box>
+      </div>
+    </>
+  );
+}

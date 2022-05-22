@@ -91,9 +91,7 @@ const Navbar = (props) => {
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
       >
         <Toolbar>
-          <Typography variant="h6" noWrap component="div">
-          Cert-Nut
-          </Typography>
+          <Typography variant="h6" noWrap component="div"></Typography>
         </Toolbar>
       </AppBar>
       <Drawer
