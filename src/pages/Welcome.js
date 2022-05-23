@@ -2,7 +2,6 @@ import * as React from "react";
 import { borderLeft, Box } from "@mui/system";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Typography } from "@mui/material";
-import vars from "../utility/vars";
 import DoNotDisturb from "@mui/icons-material/DoNotDisturb";
 import techthree from "../assets/tech3.png";
 import techtwo from "../assets/tech2.png";
@@ -10,12 +9,7 @@ import techtwo from "../assets/tech2.png";
 export default function Welcome() {
   return (
     <>
-      <div
-        style={{
-          marginLeft: `${vars.drawerWidth + 70}px`,
-          marginTop: "70px",
-        }}
-      >
+      <div style={{}}>
         <Box
           sx={
             {

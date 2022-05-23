@@ -1,6 +1,5 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
-import vars from "../utility/vars";
 import {
   Checkbox,
   FormControlLabel,
@@ -19,8 +18,7 @@ const Question = (props) => {
         width: 600,
         height: 350,
         backgroundColor: "lightblue",
-        ml: `${vars.drawerWidth + 40}px`,
-        mt: `100px`,
+        mt: `25px`,
         border: "2px solid black",
         borderRadius: "10px",
       }}
@@ -44,7 +42,6 @@ const Question = (props) => {
                   value={answer.answer}
                   control={<Checkbox />}
                   label={answer.answer}
-                  sx={{}}
                 />
               );
             })}
@@ -70,7 +67,6 @@ const Question = (props) => {
                   value={answer.answer}
                   control={<Radio />}
                   label={answer.answer}
-                  sx={{}}
                 />
               );
             })}

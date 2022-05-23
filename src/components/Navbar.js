@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
 import AppBar from "@mui/material/AppBar";
@@ -18,6 +18,7 @@ import vars from "../utility/vars";
 import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
+  const [navigationHeader, setNavigationHeader] = useState("Welcome");
   const Model = {
     providers: [
       {
@@ -91,7 +92,9 @@ const Navbar = (props) => {
         sx={{ width: `calc(100% - ${drawerWidth}px)`, ml: `${drawerWidth}px` }}
       >
         <Toolbar>
-          <Typography variant="h6" noWrap component="div"></Typography>
+          <Typography variant="h6" noWrap component="div">
+            {navigationHeader}
+          </Typography>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -140,6 +143,9 @@ const Navbar = (props) => {
                                   <ListItemText
                                     primary="Quiz"
                                     sx={{ textAlign: "center" }}
+                                    onClick={() => {
+                                      setNavigationHeader("Quiz");
+                                    }}
                                   />
                                 </Link>
                               </ListItem>
@@ -148,6 +154,9 @@ const Navbar = (props) => {
                                   <ListItemText
                                     primary="Flashcards"
                                     sx={{ textAlign: "center" }}
+                                    onClick={() => {
+                                      setNavigationHeader("Flashcards");
+                                    }}
                                   />
                                 </Link>
                               </ListItem>

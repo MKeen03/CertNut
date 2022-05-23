@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import vars from "../utility/vars";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
 import flipfront from "../assets/flipfront.PNG";
 import flipback from "../assets/flipback.png";
@@ -24,13 +23,12 @@ const Flashcard = (props) => {
       flipOnClick={true}
       flipDirection="horizontal"
       style={{
-        marginLeft: `${vars.drawerWidth + 40}px`,
-        marginTop: "100px",
         width: "600px",
         height: "350px",
         alignItems: "center",
         borderRadius: "30px",
         boxShadow: 12,
+        marginTop: "40px",
       }}
     >
       <FrontSide

@@ -3,10 +3,14 @@ import Question from "../components/Question";
 import allQuestions from "../utility/questions";
 import vars from "../utility/vars";
 import Loader from "../components/Loader";
+import Button from "@mui/material/Button";
 
 const Quiz = (props) => {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filters, setFilters] = useState([]);
+  const [showFilters, setShowFilters] = useState(false);
+  const [variant, setVariant] = useState("contained");
 
   useEffect(() => {
     let tempQuestions = vars.filterForQuizQuestions(
@@ -17,11 +21,30 @@ const Quiz = (props) => {
     setQuestions(tempQuestions);
     setLoading(false);
   }, []);
+
+  const styleSheet = {
+    buttons: { ml: `35px`, mt: "15px" },
+  };
+
   return (
     <>
-      {loading ? (<Loader />) : questions.map((question, index) => {
-        return <Question key={index} question={question} />;
-      })}
+      <p>Apply Filters:</p>
+      <Button sx={styleSheet.buttons} variant="outlined">
+        Easy
+      </Button>
+      <Button sx={styleSheet.buttons} variant="outlined">
+        Medium
+      </Button>
+      <Button sx={styleSheet.buttons} variant="outlined">
+        Hard
+      </Button>
+      {loading ? (
+        <Loader />
+      ) : (
+        questions.map((question, index) => {
+          return <Question key={index} question={question} />;
+        })
+      )}
     </>
   );
 };

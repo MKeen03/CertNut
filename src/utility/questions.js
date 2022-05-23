@@ -1361,6 +1361,229 @@ const questions = [
     ],
     selection: {},
   },
+
+  {
+    question:
+      "AWS CloudTrail logs uses 'Event History' to log event data for the last 90 days by default.",
+    flashcard:
+      "AWS CloudTrail logs uses 'Event History' to log event data for the last 90 days by default.",
+    tags: [true_false, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "True",
+        correct: true,
+      },
+      {
+        answer: "False",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "What do you need to create to track logs beyond 90 days?",
+    flashcard: "What do you need to create to track logs beyond 90 days?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "An IAM Group",
+        correct: false,
+      },
+      {
+        answer: "A 'Trail'",
+        correct: true,
+      },
+      {
+        answer: "A Lambda function",
+        correct: false,
+      },
+      {
+        answer: "An EC2 Instance configured to work with CloudTrail.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "What are the primary concerns for of AWS CloudTrail?",
+    flashcard: null,
+    tags: [multiple_selection, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "Governance",
+        correct: true,
+      },
+      {
+        answer: "Compliancce",
+        correct: true,
+      },
+      {
+        answer: "Scalability",
+        correct: false,
+      },
+      {
+        answer: "Risk and Operational Auditing",
+        correct: true,
+      },
+      {
+        answer: "Fault Tolerance",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "What can you do to ensure logs have not been tampered with?",
+    flashcard: "What can you do to ensure logs have not been tampered with?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "Setup a second Trail to watch the logs for redundancy.",
+        correct: false,
+      },
+      {
+        answer: "Set up an EC2 instances with a Watcher installed.",
+        correct: false,
+      },
+      {
+        answer: "Ensure that only admins have access to editing logs.",
+        correct: false,
+      },
+      {
+        answer: "Turn on Log File Validation.",
+        correct: true,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "How can CloudTrail logs be encrypted?",
+    flashcard: "How can CloudTrail logs be encrypted?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "Using an third party encryption service.",
+        correct: false,
+      },
+      {
+        answer: "Using AWS KMS (Key Management Service).",
+        correct: true,
+      },
+      {
+        answer: "They are encrypted by default.",
+        correct: false,
+      },
+      {
+        answer: "CloudTrail cannot have encrypted logs.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question:
+      "CloudTrail can be set to log across all AWS accounts and regions within an organization.",
+    flashcard:
+      "CloudTrail can be set to log across all AWS accounts and regions within an organization.",
+    tags: [true_false, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "True",
+        correct: true,
+      },
+      {
+        answer: "False",
+        correct: true,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "Custom Trails are stored in S3 and can be analyzed using what?",
+    flashcard: "Custom Trails are stored in S3 and can be analyzed using what?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "Amazon Athena",
+        correct: true,
+      },
+      {
+        answer: "CloudTrail Analyzer Tool",
+        correct: false,
+      },
+      {
+        answer: "Amazon QuickSight",
+        correct: false,
+      },
+      {
+        answer: "Any third party log file tool.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question: "CloudTrail logs which two kinds of events?",
+    flashcard: "CloudTrail logs which two kinds of events?",
+    tags: [multiple_choice, easy, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer: "Management Events and Data Events.",
+        correct: true,
+      },
+      {
+        answer: "Log Events and User Events.",
+        correct: false,
+      },
+      {
+        answer: "User Actions and Indirect Actions.",
+        correct: false,
+      },
+      {
+        answer: "Allows you to host a serverless Web Page.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
+
+  {
+    question:
+      "What are the differences between Management Events and Data Events?",
+    flashcard:
+      "What are the differences between Management Events and Data Events?",
+    tags: [multiple_choice, medium, solutions_architect_associate, cloudtrail],
+    answers: [
+      {
+        answer:
+          "Management Events log management operations such as creatings IAM roles or attaching policies. Data Events log data operations such as S3's PutObject and GetObject and are not tracked by default.",
+        correct: true,
+      },
+      {
+        answer:
+          "Management Events are reserved for tracking administrative actions to prevent abuse. Data Events are anything else done on regular accounts.",
+        correct: false,
+      },
+      {
+        answer:
+          "Management Events are only tracked at the organizational level and do not track any day-to-day activities. Data Events are the automated API calls between services and are tracked by default.",
+        correct: false,
+      },
+      {
+        answer:
+          "There is no difference between a Management Event and a Data Event.",
+        correct: false,
+      },
+    ],
+    selection: {},
+  },
   // KEEN QUESTIONS HERE
 ];
 

@@ -16,6 +16,8 @@ const vars = {
     });
     return questionFilter;
   },
+
+  navigationHeader: "Welcome",
 };
 
 export default vars;
